@@ -3,7 +3,7 @@ import React from "react";
 import { api } from "../utils/Api";
 import Card from "./Card";
 
-function Content({ onEditAvatar, onEditProfile, onAddPlace, onCardClick }) {
+function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick }) {
   const [userName, setUserName] = React.useState("");
   const [userDescription, setUserDescription] = React.useState("");
   const [userAvatar, setUserAvatar] = React.useState("");
@@ -60,4 +60,4 @@ function Content({ onEditAvatar, onEditProfile, onAddPlace, onCardClick }) {
   );
 }
 
-export default Content;
+export default Main;

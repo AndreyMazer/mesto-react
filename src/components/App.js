@@ -1,10 +1,10 @@
 import React from "react";
 import "../index.css";
 import Header from "./Header";
-import Content from "./Content";
+import Main from "./Main";
 import Footer from "./Footer";
-import PopupWithImage from "./PopupWithImage";
-import PopupWithForm from "./PopupWithForm";
+import ImagePopup from "./ImagePopup";
+import PopupWithForm from "./ImagePopup";
 
 function App() {
   const [isEditAvatarPopupOpen, setEditAvatarPopupOpen] = React.useState(false);
@@ -36,7 +36,7 @@ function App() {
   
     <div className="page">
       <Header />
-      <Content
+      <Main
         onEditAvatar={handleEditAvatarClick}
         onEditProfile={handleEditProfileClick}
         onAddPlace={handleAddPlaceClick}
@@ -122,7 +122,7 @@ function App() {
         }
       />
       <PopupWithForm name="popupDelete" title="Вы уверены?" />
-      <PopupWithImage card={selectedCard} onClose={closeAllPopups} />
+      <ImagePopup card={selectedCard} onClose={closeAllPopups} />
     </div>
     
   );
