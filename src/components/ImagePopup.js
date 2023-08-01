@@ -1,35 +1,25 @@
 import React from "react";
-
-function PopupWithForm(props) {
+function ImagePopup({ card, onClose }) {
   return (
-    <>
-      <div
-        className={
-          props.isOpen
-            ? `popup popup_${props.name} popup_opened`
-            : `popup popup_${props.name}`
-        }
-      >
-        <div className="popup__container">
-          <button onClick={props.onClose} type="button" className="popup__close-button"></button>
-          <h2 className="popup__title">{props.title}</h2>
-          <form
-            name={`${props.name}`}
-            className="form"
-            id="formProfileEdit"
-            noValidate
-          >
-            {props.children}
-            <button
-              type="submit"
-              className="popup__save"
-            >
-              Сохранить
-            </button>
-          </form>
-        </div>
+    <div
+      className={`popup popup_big ${card && 'popup_opened'}`}
+      id="popupBigCard"
+    >
+      <div className="popup__container-big">
+        <img
+          className="popup__picture popup__picture_big"
+          src={card && card.link}
+          alt={card && card.name}
+        />
+        <button
+          onClick={onClose}
+          type="button"
+          className="popup__close-button popup__close-button_big"
+        ></button>
+        <h2 className="popup__title-big">{card && card.name}</h2>
       </div>
-    </>
+    </div>
   );
 }
-export default PopupWithForm;
+
+export default ImagePopup;
