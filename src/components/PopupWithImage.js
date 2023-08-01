@@ -2,7 +2,7 @@ import React from "react";
 function PopupWithImage({ card, onClose }) {
   return (
     <div
-      className="popup popup_big ${card && 'popup_opened'}"
+      className={`popup popup_big ${card && 'popup_opened'}`}
       id="popupBigCard"
     >
       <div className="popup__container-big">

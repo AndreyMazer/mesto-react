@@ -1,11 +1,10 @@
 import React from "react";
-//import api from "../utils/api";
 import "../index.css";
 import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
-import PopupWithForm from "./PopupWithForm";
 import PopupWithImage from "./PopupWithImage";
+import PopupWithForm from "./PopupWithForm";
 
 function App() {
   const [isEditAvatarPopupOpen, setEditAvatarPopupOpen] = React.useState(false);
@@ -34,6 +33,7 @@ function App() {
     setSelectedCard(null);
   }
   return (
+  
     <div className="page">
       <Header />
       <Content
@@ -124,6 +124,7 @@ function App() {
       <PopupWithForm name="popupDelete" title="Вы уверены?" />
       <PopupWithImage card={selectedCard} onClose={closeAllPopups} />
     </div>
+    
   );
 }
 export default App;

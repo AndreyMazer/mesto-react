@@ -10,7 +10,7 @@ function Content({ onEditAvatar, onEditProfile, onAddPlace, onCardClick }) {
   const [cards, setCards] = React.useState([]);
 
   React.useEffect(() => {
-    Promise.all([api.getUserInfo(), api.getCards()])
+    Promise.all([api.getProfile(), api.getInitialCards()])
       .then(([resUser, resCard]) => {
         setUserName(resUser.name);
         setUserDescription(resUser.about);
