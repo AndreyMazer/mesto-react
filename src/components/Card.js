@@ -8,7 +8,7 @@ function Card({ card, onCardClick }) {
       <img
         className="element__gora"
         src={card.link}
-        alt={`${card.name}`}
+        alt={card.name}
         onClick={handleClick}
       />
       <h2 className="element__title">{card.name}</h2>
