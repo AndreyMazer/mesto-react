@@ -24,23 +24,23 @@ class Api {
     });
   }
 
-  editProfile(profile) {
+  editProfile(data) {
     return this._toDo(`users/me`, {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-        name: profile.name,
-        about: profile.career,
+        name: data.name,
+        about: data.about,
       }),
     });
   }
 
-  editAvatar(avatar) {
+  editAvatar(data) {
     return this._toDo(`users/me/avatar`, {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-        avatar: avatar,
+        avatar: data.avatar,
       }),
     });
   }
@@ -57,28 +57,28 @@ class Api {
       method: "POST",
       headers: this._headers,
       body: JSON.stringify({
-        name: data.place,
+        name: data.name,
         link: data.link,
       }),
     });
   }
 
-  deleteCard(cardId) {
-    return this._toDo(`cards/${cardId}`, {
+  deleteCard(id) {
+    return this._toDo(`cards/${id}`, {
       method: "DELETE",
       headers: this._headers,
     });
   }
 
-  addLike(cardId) {
-    return this._toDo(`cards/${cardId}/likes`, {
+  addLike(id) {
+    return this._toDo(`cards/${id}/likes`, {
       method: "PUT",
       headers: this._headers,
     });
   }
 
-  deleteLike(cardId) {
-    return this._toDo(`cards/${cardId}/likes`, {
+  deleteLike(id) {
+    return this._toDo(`cards/${id}/likes`, {
       method: "DELETE",
       headers: this._headers,
     });
@@ -92,3 +92,5 @@ export const api = new Api({
     "Content-Type": "application/json",
   },
 });
+
+export default api;
