@@ -4,7 +4,7 @@
 * [Ссылка на проект в GitHub](https://andreymazer.github.io/mesto-react/public/index.html)
 * [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 
-# В проекте реализовано реализовано:
+# В проекте реализовано:
 ---
 - Добавление и удаление фотокарточекъ
 - Изменение информациии о пользователе
